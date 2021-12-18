@@ -2,7 +2,7 @@ const express = require("express");
 const apisauce = require('apisauce')
 const routes = express.Router();
 
-const api = apisauce.create({ baseURL: 'http://172.21.86.186:5000' });
+const api = apisauce.create({ baseURL: 'http://172.21.188.211:3000' });
 
 
 routes.post("/echo", async (req, res) => {
@@ -19,8 +19,7 @@ routes.get('/envia', async (req, res) => {
             "url": "https://api.us-south.assistant.watson.cloud.ibm.com/instances/c344f301-3f99-4a6f-b8ab-269ae6e3718a",
             "skillId": "3bdc1628-867d-420c-87de-099259ee3f88",
             "apiKey": "rx7B1FY2pF7lQiLKwUfdZl14ZeX1kVUWRV19k7XlR_PR",
-            "submitConfirmation": false
-        
+            "submitConfirmation": true
     })
     return res.send(response.data);
 })
